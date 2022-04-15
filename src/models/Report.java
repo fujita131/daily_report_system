@@ -61,6 +61,10 @@ public class Report {
     @Column(name = "updated_at", nullable = false)
     private Timestamp updated_at;
 
+ // いいね数のプロパティを追加
+    @Column(name = "good_count", nullable = false)
+    private Integer good_count;
+
     public Integer getId() {
         return id;
     }
@@ -89,6 +93,11 @@ public class Report {
         return title;
     }
 
+ // いいね数のゲッターセッターを追加
+    public Integer getGood_count() {
+        return good_count;
+    }
+
     public void setTitle(String title) {
         this.title = title;
     }
@@ -115,5 +124,9 @@ public class Report {
 
     public void setUpdated_at(Timestamp updated_at) {
         this.updated_at = updated_at;
+    }
+
+    public void setGood_count(Integer good_count) {
+        this.good_count = good_count;
     }
 }
